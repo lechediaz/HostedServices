@@ -1,8 +1,26 @@
 ## Descripción
 
-En este repositorio se busca demostrar dos formas de mantener tareas trabajando en segundo plano, bien sea en un WebHost o un Host, para ello, contamos con los siguientes proyectos:
+En este repositorio se busca demostrar dos formas de mantener tareas trabajando en segundo plano en .Net Core, bien sea en un WebHost o un Host, para ello, contamos con los siguientes proyectos:
 
-- [Core](Core): En este se encuentra la clase [MyLogService](Core\Services\MyLogService.cs), ésta básicmaente lo que hace es que mientras el proceso principal esté corriendo, escribirá en un archivo un texto.
+- [Core](Core): Es una biblioteca de clases y este se encuentra la clase [MyLogService](Core\Services\MyLogService.cs), ésta básicamente lo que hace es que mientras el proceso principal esté corriendo, escribirá en un archivo un texto.
+
+    En el proyecto de destino es importante configurar los siguientes valores, por ejemplo en `appsettinds.json`:
+
+    ```json
+    {
+        "EscribirArchivoSettings": {
+            "RutaCarpeta": "Logs",
+            "NombreArchivo": "ApiWithHostedService.txt",
+            "IntervaloSegundos": 10
+        }
+    }
+
+    ```
+
+    Los valores de la claves contienen:
+    - **RutaCarpeta** es la ruta relativa a donde se está ejecutando el proceso donde se van a poner el archivo a escribir.
+    - **NombreArchivo** es el nombre del archivo donde escribir.
+    - **IntervaloSegundos** indica el intervalo en segundos a escribir en el archivo.
 
 - [ApiWithHostedService](ApiWithHostedService): Consiste en una Web API comùn y corriente, pero que registra el *MyLogService* para que escriba el archivo mientras el Web API está ejecutandose en IIS, por ejemplo.
 
