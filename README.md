@@ -2,7 +2,7 @@
 
 En este repositorio se busca demostrar dos formas de mantener tareas trabajando en segundo plano en .Net Core, bien sea en un WebHost o un Host, para ello, contamos con los siguientes proyectos:
 
-- [Core](Core): Es una biblioteca de clases y este se encuentra la clase [MyLogService](Core\Services\MyLogService.cs), ésta básicamente lo que hace es que mientras el proceso principal esté corriendo, escribirá en un archivo un texto.
+- [Core](Core): Es una biblioteca de clases y este se encuentra la clase [MyLogService](Core/Services/MyLogService.cs), ésta básicamente lo que hace es que mientras el proceso principal esté corriendo, escribirá en un archivo un texto.
 
     En el proyecto de destino es importante configurar los siguientes valores, por ejemplo en `appsettings.json`:
 
