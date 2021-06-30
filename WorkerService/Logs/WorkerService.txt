@@ -1,7 +1,0 @@
-Proceso iniciado 2021-06-13 09:02:26
-Hacer una operación 2021-06-13 09:02:26
-Hacer una operación 2021-06-13 09:02:36
-Hacer una operación 2021-06-13 09:02:46
-Hacer una operación 2021-06-13 09:02:56
-Hacer una operación 2021-06-13 09:03:06
-Proceso detenido 2021-06-13 09:03:13
