@@ -1,4 +1,4 @@
-using Core;
+using LogHostedService;
 using Microsoft.Extensions.Hosting;
 
 namespace WorkerService
@@ -14,7 +14,7 @@ namespace WorkerService
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddMyLogService(hostContext.Configuration);
+                    services.AddLogHostedService(hostContext.Configuration);
                     //services.AddHostedService<Worker>();
                 });
     }

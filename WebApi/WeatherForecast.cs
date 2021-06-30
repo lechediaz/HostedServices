@@ -1,6 +1,6 @@
 using System;
 
-namespace ApiWithHostedService
+namespace WebApi
 {
     public class WeatherForecast
     {
