@@ -16,6 +16,7 @@ namespace WorkerService
                 {
                     services.AddLogHostedService(hostContext.Configuration);
                     //services.AddHostedService<Worker>();
-                });
+                })
+                .UseWindowsService();
     }
 }
